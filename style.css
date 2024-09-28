@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(./images/TR-tr-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    position: relative;
+}
+
+.main .box {
+    position: absolute;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    height: 656px;
+    opacity: 0.3;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60vw;
+    height: 100%;
+    margin: auto;
+}
+
+.nav .buttons {
+    z-index: 10;
+}
+
+.nav img {
+    width: 130px;
+}
+
+.nav span {
+    z-index: 10;
+}
+
+.btn {
+    background-color: rgba(248, 243, 243, 0.021);
+    padding: 3px 8px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+/* Hero Kısımı */
+.hero {
+    position: relative;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 30px;
+    height: calc(100vh - 100px);
+    /* "calc" metodu hesaplama yaparken kullanılır. Burada height olarak 100% kapla ama nav kısmının 100px değerini de hesaba kat demiş oluruz. 
+    
+    not:
+    vh: height iççin 100% demektir.
+    vw: width için 100% demektir.
+    */
+}
+
+.hero > :nth-child(1) {
+    font-size: 50px;
+    font-weight: bold;
+}
+/* nth-child(): bir kapsayıcı içindeki ..inci/ıncı elemanı seçmeye yarar. Kaıncı elemanı seeçceği () iççerisinde yer alan rakama göre belirlenir. */
+
+.hero > :nth-child(2) {
+   font-size: 24px;
+   font-weight: 400;
+   text-align: center;
+}
+
+.hero > :nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self: center;
+    /* justify-self: flex yapısı aktif iken yatay ve dikeyde hizalama yapma için kullanılır. */
+}
+
+.hero-btn input {
+    background-color: rgba(23, 23, 23, 0.6);
+    padding: 7px 101px 8px 14px;
+    font-size: 12px;
+    outline: none;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 4px;
+    color: white;
+}
+
+.hero-btn button {
+    padding: 8px 20px;
+    font-size: 15px;
+}
+
+/* Her alan arasında yer alan çizgiler */
+
+.seperation {
+    border: 3px solid rgb(83, 81, 81);
+}
+
+/* içerik kısımı */
+.first {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+}
+
+.secondImg {
+    position: relative;
+}
+
+
+.secondImg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+
+.secondImg video {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+}
+
+.first h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.first p {
+    font-size: 22px;
+    margin-top: 10px;
+
+}
+
+/* sorular kısımı */
+.question {
+    color: white;
+    padding: 35px;
+}
+
+.question h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.question-box {
+   background-color: #474646;
+   font-size: 24px;
+   display: flex;
+   justify-content: space-between;
+   padding: 24px;
+   margin: 34px auto;
+   cursor: pointer;
+   max-width: 60vw;
+   transition: all .3s;
+}
+
+.question-box:hover {
+    background-color: rgb(49, 47, 47);
+}
+
+/* Footer kısımı */
+.footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.footer .questions {
+    padding: 34px 0;
+    font-size: 25px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item a {
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.footer-item a:hover {
+    color: rgb(221, 64, 64);
+}
+
+
+
+@media (max-width: 1300px ){
+    .first {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .first h1 {
+        margin-top: 20px;
+        font-size: 35px;
+    }
+
+    .first p {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+}
